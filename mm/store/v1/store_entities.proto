@@ -8,5 +8,5 @@ message Element {
 	uint64 id = 1;
 
 	string name = 2;
-	string baseUrl = 3;
+	string base_url = 3;
 }
