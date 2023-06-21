@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package mm.store.v1;
+
+option go_package = "github.com/kda-mm/go-genproto/mm/store/v1;store";
+
+message Element {
+	uint64 id = 1;
+
+	string name = 2;
+	string baseUrl = 3;
+}

@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package mm.store.v1;
+
+option go_package = "github.com/kda-mm/go-genproto/mm/store/v1;store";
+
+import "google/api/annotations.proto";
+import "mm/store/v1/store_messages.proto";
+
+service StoreService {
+	rpc Create (CreateRequest) returns (CreateResponse) {
+		option (google.api.http) = {
+			post: "/store/v1/Create",
+			body: "*"
+		};
+	}
+	rpc Get (GetRequest) returns (GetListResponse) {
+		option (google.api.http) = {
+			post: "/store/v1/Get",
+			body: "*"
+		};
+	}
+	rpc GetList (GetListRequest) returns (GetListResponse) {
+		option (google.api.http) = {
+			post: "/store/v1/GetList",
+			body: "*"
+		};
+	}
+	rpc Update (UpdateRequest) returns (UpdateResponse) {
+		option (google.api.http) = {
+			post: "/store/v1/Update",
+			body: "*"
+		};
+	}
+	rpc Delete (DeleteRequest) returns (DeleteResponse) {
+		option (google.api.http) = {
+			post: "/store/v1/Delete",
+			body: "*"
+		};
+	}
+}

@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package mm.store.v1;
+
+option go_package = "github.com/kda-mm/go-genproto/mm/store/v1;store";
+
+import "mm/store/v1/store_entities.proto";
+
+message CreateRequest {
+	uint64 id = 1;
+
+	string name = 2;
+	string baseUrl = 3;
+}
+
+message CreateResponse {
+	mm.store.v1.Element store = 1;
+}
+
+message GetRequest {
+	repeated uint64 ids = 1;
+}
+
+message GetListRequest {
+	optional uint64 offset = 1;
+	optional uint32 limit = 2;
+}
+
+message GetListResponse {
+	repeated mm.store.v1.Element store_list = 1;
+}
+
+
+message UpdateRequest {
+	uint64 id = 1;
+
+	string name = 2;
+	string baseUrl = 3;
+}
+
+message UpdateResponse {
+	mm.store.v1.Element store = 1;
+}
+
+message DeleteRequest {
+	uint64 id = 1;
+}
+
+message DeleteResponse {}
