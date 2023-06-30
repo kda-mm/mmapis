@@ -8,9 +8,7 @@ import "mm/store/v1/store_entities.proto";
 
 message CreateRequest {
 	uint64 id = 1;
-
 	string name = 2;
-	string base_url = 3;
 }
 
 message CreateResponse {
@@ -33,9 +31,7 @@ message GetListResponse {
 
 message UpdateRequest {
 	uint64 id = 1;
-
 	string name = 2;
-	string base_url = 3;
 }
 
 message UpdateResponse {
